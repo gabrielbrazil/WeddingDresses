@@ -23,11 +23,36 @@
     	<artifactId>javax.servlet-api</artifactId>
     	<version>3.0.1</version>
 	</dependency>
+	<!-- Jstl Tags  -->	
+	<dependency>
+    	<groupId>javax.servlet.jsp.jstl</groupId>
+    	<artifactId>jstl-api</artifactId>
+    	<version>1.2</version>
+    	<exclusions>
+    		<exclusion>
+    			<groupId>javax.servlet</groupId>
+    			<artifactId>javax.servlet-api</artifactId>
+    		</exclusion>
+    	</exclusions>
+	</dependency>
+	
+	<dependency>
+    <groupId>org.glassfish.web</groupId>
+    <artifactId>jstl-impl</artifactId>
+    <version>1.2</version>
+    <exclusions>
+    		<exclusion>
+    			<groupId>javax.servlet</groupId>
+    			<artifactId>javax.servlet-api</artifactId>
+    		</exclusion>
+    	</exclusions>
+</dependency>
+	
   </dependencies>
   
   
   <build>
-    <finalName>weddingdresses</finalName>
+    <finalName>sponsadream</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
